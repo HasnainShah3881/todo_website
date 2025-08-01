@@ -1,10 +1,10 @@
 import {Modal, ModalBody, ModalHeader } from "flowbite-react";
 import { useContext} from "react";
 import LoginForm from "../login/loginform";
-import { datacontext } from "../../../datacontext";
+import { DataContext } from "../../datacontext";
 
 export function Loginmodal() {
-  const { openLogin, setopenLogin } = useContext(datacontext);
+  const { openLogin, setopenLogin } = useContext(DataContext);
   
   
   return (

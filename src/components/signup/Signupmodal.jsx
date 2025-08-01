@@ -1,16 +1,14 @@
 
-import { Button, Modal, ModalBody, ModalHeader } from "flowbite-react";
-import { useContext, useState } from "react";
-import { HiOutlineExclamationCircle } from "react-icons/hi";
+import { Modal, ModalBody, ModalHeader } from "flowbite-react";
+import { useContext} from "react";
 import SignupForm from "./SignupForm";
-import { datacontext } from "../../../datacontext";
+import { DataContext } from "../../datacontext";
 
 export function Signupmodal() {
-  const {opensignup, setopensignup} = useContext(datacontext);
+  const {opensignup, setopensignup} = useContext(DataContext);
 
   return (
     <>
-      {/* <Button onClick={() => setopensignup(true)}>Toggle modal</Button> */}
       <Modal show={opensignup} size="lg" onClose={() => setopensignup(false)} popup>
         <ModalHeader />
         <ModalBody className="px-6 sm:px-10 pb-5 sm:pb-10">
