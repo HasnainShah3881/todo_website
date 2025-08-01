@@ -2,14 +2,12 @@ import React, { useContext, useEffect } from "react";
 import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Flex } from "antd";
 import axios from "axios";
-import { NavLink } from "react-router";
-import { datacontext } from "../../../datacontext";
 import { toast } from "react-toastify";
-// import axios from 'axios'
+import { DataContext } from "../../datacontext";
 const SignupForm = () => {
   const [form] = Form.useForm();
-  const { opensignup, setopensignup } = useContext(datacontext);
-  const { openLogin, setopenLogin } = useContext(datacontext);
+  const { opensignup, setopensignup } = useContext(DataContext);
+  const { openLogin, setopenLogin } = useContext(DataContext);
   const Allusers = () => {
     console.log("fetch data");
   };

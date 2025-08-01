@@ -29,8 +29,8 @@ import {
   CheckCircleOutlined,
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
-import { datacontext } from "../../../datacontext";
 import { useNavigate } from "react-router";
+import { DataContext } from "../../datacontext";
 
 const { TabPane } = Tabs;
 const { TextArea } = Input;
@@ -42,7 +42,7 @@ const Profile = () => {
   const [profileData, setProfileData] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [form] = Form.useForm();
-  const { User, setUser } = useContext(datacontext);
+  const { User, setUser } = useContext(DataContext);
   const navigate = useNavigate()
   if(!User){
       navigate("/")

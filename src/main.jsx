@@ -3,7 +3,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { DataProvider } from "../datacontext.jsx";
+import { DataProvider } from "./datacontext.jsx"; // ✅ fixed path
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
