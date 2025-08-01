@@ -1,13 +1,10 @@
-import { Button, Modal, ModalBody, ModalHeader } from "flowbite-react";
-import { useContext, useState } from "react";
-import { HiOutlineExclamationCircle } from "react-icons/hi";
-// import { DataContext } from "../../datacontext";
+import {Modal, ModalBody, ModalHeader } from "flowbite-react";
+import { useContext} from "react";
 import LoginForm from "../login/loginform";
-import { DataContext } from "../../../datacontext";
+import { datacontext } from "../../../datacontext";
 
 export function Loginmodal() {
-  const { openLogin, setopenLogin } = useContext(DataContext);
-  const { User , setUser } = useContext(DataContext);
+  const { openLogin, setopenLogin } = useContext(datacontext);
   
   
   return (

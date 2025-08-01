@@ -8,15 +8,15 @@ import { UserOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { NavLink, Route, Routes } from "react-router";
-import { DataContext } from "../../../datacontext";
+import { datacontext } from "../../../datacontext";
 function Home() {
 
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
 
-  const { opensignup, setopensignup } = useContext(DataContext);
-  const { openLogin, setopenLogin } = useContext(DataContext);
-  const { User, setUser } = useContext(DataContext);
+  const { opensignup, setopensignup } = useContext(datacontext);
+  const { openLogin, setopenLogin } = useContext(datacontext);
+  const { User, setUser } = useContext(datacontext);
 
   const getUser = async () => {
     if (User) {

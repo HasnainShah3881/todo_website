@@ -3,13 +3,13 @@ import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Flex } from "antd";
 import axios from "axios";
 import { NavLink } from "react-router";
-import { DataContext } from "../../../datacontext";
+import { datacontext } from "../../../datacontext";
 import { toast } from "react-toastify";
 // import axios from 'axios'
 const SignupForm = () => {
   const [form] = Form.useForm();
-  const { opensignup, setopensignup } = useContext(DataContext);
-  const { openLogin, setopenLogin } = useContext(DataContext);
+  const { opensignup, setopensignup } = useContext(datacontext);
+  const { openLogin, setopenLogin } = useContext(datacontext);
   const Allusers = () => {
     console.log("fetch data");
   };

@@ -1,16 +1,16 @@
 import React, { use, useContext, useEffect } from "react";
 import { LockFilled, LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
-import { DataContext } from "../../../datacontext";
+import { datacontext } from "../../../datacontext";
 import axios from "axios";
 import { faL } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "react-toastify";
 
 const LoginForm = () => {
   const [form] = Form.useForm(); // Create form instance
-  const { opensignup, setopensignup } = useContext(DataContext);
-  const { openLogin, setopenLogin } = useContext(DataContext);
-  const { User, setUser } = useContext(DataContext);
+  const { opensignup, setopensignup } = useContext(datacontext);
+  const { openLogin, setopenLogin } = useContext(datacontext);
+  const { User, setUser } = useContext(datacontext);
 
   const onFinish = async (values) => {
     // console.log("Received values of form: ", values);

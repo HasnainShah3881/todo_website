@@ -3,10 +3,10 @@ import { Button, Modal, ModalBody, ModalHeader } from "flowbite-react";
 import { useContext, useState } from "react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 import SignupForm from "./SignupForm";
-import { DataContext } from "../../../datacontext";
+import { datacontext } from "../../../datacontext";
 
 export function Signupmodal() {
-  const {opensignup, setopensignup} = useContext(DataContext);
+  const {opensignup, setopensignup} = useContext(datacontext);
 
   return (
     <>
