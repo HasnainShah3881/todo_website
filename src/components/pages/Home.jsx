@@ -18,7 +18,6 @@ function Home() {
   const { opensignup, setopensignup } = useContext(DataContext);
   const { openLogin, setopenLogin } = useContext(DataContext);
   const { User, setUser } = useContext(DataContext);
-
   const getUser = async () => {
     if (User) {
       return;

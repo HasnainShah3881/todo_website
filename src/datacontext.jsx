@@ -6,10 +6,10 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [openSignup, setOpenSignup] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
-  const [user, setUser] = useState("");
+  const [User, setUser] = useState("");
 
   return (
-    <DataContext.Provider value={{ openSignup, setOpenSignup, openLogin, setOpenLogin, user, setUser }}>
+    <DataContext.Provider value={{ openSignup, setOpenSignup, openLogin, setOpenLogin, User, setUser }}>
       {children}
     </DataContext.Provider>
   );
