@@ -15,7 +15,7 @@ function Home() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
 
-  const { opensignup, setopensignup } = useContext(DataContext);
+  const { openSignup, setopenSignup } = useContext(DataContext);
   const { openLogin, setopenLogin } = useContext(DataContext);
   const { User, setUser } = useContext(DataContext);
   console.log(openLogin);
@@ -77,7 +77,7 @@ function Home() {
   };
 
   const signup = () => {
-    setopensignup(true);
+    setopenSignup(true);
   };
   const login = () => {
     setopenLogin(true);
