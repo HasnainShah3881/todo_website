@@ -4,12 +4,12 @@ import { createContext, useState } from "react";
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [openSignup, setOpenSignup] = useState(false);
-  const [openLogin, setOpenLogin] = useState(false);
+  const [openSignup, setopenSignup] = useState(false);
+  const [openLogin, setopenLogin] = useState(false);
   const [User, setUser] = useState("");
 
   return (
-    <DataContext.Provider value={{ openSignup, setOpenSignup, openLogin, setOpenLogin, User, setUser }}>
+    <DataContext.Provider value={{ openSignup, setopenSignup, openLogin, setopenLogin, User, setUser }}>
       {children}
     </DataContext.Provider>
   );

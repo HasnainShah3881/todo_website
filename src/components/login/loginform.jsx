@@ -7,7 +7,7 @@ import { DataContext } from "../../datacontext";
 
 const LoginForm = () => {
   const [form] = Form.useForm(); // Create form instance
-  const { opensignup, setopensignup } = useContext(DataContext);
+  const { openSignup, setopenSignup } = useContext(DataContext);
   const { openLogin, setopenLogin } = useContext(DataContext);
   const { User, setUser } = useContext(DataContext);
 
@@ -29,7 +29,7 @@ const LoginForm = () => {
         // toast.success("login successfully");
         form.resetFields();
         setopenLogin(false);
-        setopensignup(false);
+        setopenSignup(false);
         window.location.reload();
       }
       console.log("RESPONSE", res);
@@ -110,7 +110,7 @@ const LoginForm = () => {
         <a
           onClick={() => {
             setopenLogin(false);
-            setopensignup(true);
+            setopenSignup(true);
           }}
         >
           Register now!

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { DataContext } from "../../datacontext";
 const SignupForm = () => {
   const [form] = Form.useForm();
-  const { opensignup, setopensignup } = useContext(DataContext);
+  const { openSignup, setopenSignup } = useContext(DataContext);
   const { openLogin, setopenLogin } = useContext(DataContext);
   const Allusers = () => {
     console.log("fetch data");
@@ -32,7 +32,7 @@ const SignupForm = () => {
         toast.success("Signup successfully");
 
         setopenLogin(true);
-        setopensignup(false);
+        setopenSignup(false);
         form.resetFields();
       }
 
@@ -134,7 +134,7 @@ const SignupForm = () => {
         <a
           onClick={() => {
             setopenLogin(true);
-            setopensignup(false);
+            setopenSignup(false);
           }}
         >
           you already have an account? Go to Login
