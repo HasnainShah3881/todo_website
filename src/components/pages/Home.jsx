@@ -24,7 +24,7 @@ function Home() {
     if (User) {
       return;
     }
-    const res = await axios.get("todo-website-backend-jet.vercel.app/Users/getUser", {
+    const res = await axios.get("https://todo-website-backend-jet.vercel.app/Users/getUser", {
       withCredentials: true,
     });
     setUser(res.data);
@@ -34,7 +34,7 @@ function Home() {
   const logout = async () => {
     try {
       const res = await axios.post(
-        "todo-website-backend-jet.vercel.app/Auth/logout",
+        "https://todo-website-backend-jet.vercel.app/Auth/logout",
         {},
         {
           withCredentials: true,
