@@ -16,7 +16,7 @@ const SignupForm = () => {
     console.log("Received values of form: ", values);
     try {
       const res = await axios.post(
-        "http://localhost:3000/Auth/signup",
+        "todo-website-backend-jet.vercel.app/Auth/signup",
         {
           firstname: values.firstname,
           lastname: values.lastname,
