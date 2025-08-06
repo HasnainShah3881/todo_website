@@ -4,6 +4,7 @@ import { Button, Form, Input, Flex } from "antd";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { DataContext } from "../../datacontext";
+import { base_url } from "../URLs/based_url";
 const SignupForm = () => {
   const [form] = Form.useForm();
   const { openSignup, setopenSignup } = useContext(DataContext);
