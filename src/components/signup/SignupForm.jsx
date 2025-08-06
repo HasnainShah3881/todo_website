@@ -16,7 +16,7 @@ const SignupForm = () => {
     console.log("Received values of form: ", values);
     try {
       const res = await axios.post(
-        "https://backend-for-todo-kappa.vercel.app/Auth/signup",
+        `${base_url}/Auth/signup`,
         {
           firstname: values.firstname,
           lastname: values.lastname,
@@ -28,7 +28,6 @@ const SignupForm = () => {
         }
       );
       if (res.status == 200) {
-        // alert("Signup successfully");
         toast.success("Signup successfully");
 
         setopenLogin(true);

@@ -24,7 +24,7 @@ function Home() {
     if (User) {
       return;
     }
-    const res = await axios.get("https://backend-for-todo-kappa.vercel.app/Users/getUser", {
+    const res = await axios.get(`${base_url}/Users/getUser`, {
       withCredentials: true,
     });
     setUser(res.data);
@@ -34,7 +34,7 @@ function Home() {
   const logout = async () => {
     try {
       const res = await axios.post(
-        "https://backend-for-todo-kappa.vercel.app/Auth/logout",
+        `${base_url}/Auth/logout`,
         {},
         {
           withCredentials: true,
