@@ -32,7 +32,7 @@ const LoginForm = () => {
         setopenSignup(false);
         window.location.reload();
       }
-      console.log("RESPONSE", res);
+    
     } catch (error) {
       toast.error("invalid credential");
     }

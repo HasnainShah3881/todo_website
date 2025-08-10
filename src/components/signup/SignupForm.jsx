@@ -14,7 +14,7 @@ const SignupForm = () => {
   };
 
   const signup = async (values) => {
-    console.log("Received values of form: ", values);
+
     try {
       const res = await axios.post(
         `${base_url}/Auth/signup`,
@@ -28,13 +28,13 @@ const SignupForm = () => {
           withCredentials: true,
         }
       );
-      if (res.status == 200) {
-        toast.success("Signup successfully");
+      if (res.status == 201) {
+        toast.success(res.data.message);
 
         setopenLogin(true);
         setopenSignup(false);
         form.resetFields();
-      }
+      
 
       console.log("RESPONSE", res);
     } catch (error) {
