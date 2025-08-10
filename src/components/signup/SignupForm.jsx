@@ -34,7 +34,7 @@ const SignupForm = () => {
         setopenLogin(true);
         setopenSignup(false);
         form.resetFields();
-      
+      }
 
       console.log("RESPONSE", res);
     } catch (error) {
