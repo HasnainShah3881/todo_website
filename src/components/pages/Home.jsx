@@ -116,9 +116,9 @@ function Home() {
                     />
                   </NavLink>
 
-                  {/* <Button size="lg" onClick={logout}>
+                  {<Button size="lg" onClick={logout}>
                     Sign Out
-                  </Button> */}
+                  </Button>}
                 </div>
               </>
             ) : (
