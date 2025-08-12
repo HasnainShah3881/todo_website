@@ -28,8 +28,8 @@ const SignupForm = () => {
           withCredentials: true,
         }
       );
-      if (res.data.success === true) {
-        toast.success("Signup successfully");
+      if (res.data.success === true || res.status === 200) {
+        toast.success(res.data.message || "Signup successfully");
         setopenLogin(true);
         setopenSignup(false);
         form.resetFields();

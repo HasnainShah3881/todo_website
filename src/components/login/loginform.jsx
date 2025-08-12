@@ -26,13 +26,13 @@ const LoginForm = () => {
       );
 
       if (res.data.success === true || res.status === 200) {
-        // toast.success("login successfully");
+        toast.success(res.data.message || "Login successfully");
         form.resetFields();
         setopenLogin(false);
         setopenSignup(false);
         window.location.reload();
       }
-      console.log("RESPONSE", res);
+      // console.log("RESPONSE", res);
     } catch (error) {
       toast.error("invalid credential");
     }
