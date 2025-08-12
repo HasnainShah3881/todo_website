@@ -25,7 +25,7 @@ const LoginForm = () => {
         }
       );
 
-      if (res.data.success === true) {
+      if (res.data.success === true || res.status === 200) {
         // toast.success("login successfully");
         form.resetFields();
         setopenLogin(false);
