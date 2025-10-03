@@ -14,7 +14,7 @@ const SignupForm = () => {
   // };
 
   const signup = async (values) => {
-    console.log("Received values of form: ", values);
+    console.log("Received values of form: ");
     // try {
       const res = await axios.post(
         `${base_url}/Auth/signup`,
@@ -37,7 +37,7 @@ const SignupForm = () => {
         toast.error(res.data.message || "invalid credential");
       }
 
-      console.log("RESPONSE", res);
+      // console.log("RESPONSE", res);
   };
 
 

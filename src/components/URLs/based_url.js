@@ -1,3 +1,3 @@
-const base_url = "http://localhost:3000"
+const base_url = "https://backend-todo-phi-two.vercel.app"
 
 export { base_url }

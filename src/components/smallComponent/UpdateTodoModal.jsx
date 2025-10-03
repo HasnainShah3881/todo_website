@@ -32,11 +32,10 @@ function UpdateTodoModal({ isOpen, onClose, todo, onUpdate, data }) {
         data();
         toast.success(res.data.message || "Todo updated successfully");
       } else {
-        alert(res.data.message);
+        toast.error(res.data.message);
       }
     } catch (error) {
-      console.error("Update failed:", error);
-      alert("Something went wrong!");
+      toast.error("Something went wrong!");
     }
   };
 

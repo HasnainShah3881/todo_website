@@ -32,7 +32,7 @@ function Home() {
   }, []);
   const getUser = async () => {
     if (Profile) {
-      return console.log(Profile);
+      return ;
     }
     const res = await axios.get(`${base_url}/Users/getUser`, {
       withCredentials: true,
@@ -48,7 +48,7 @@ function Home() {
     });
     setTodos(res.data);
     toast.success(res.data.message);
-    console.log("data in home page", res.data);
+    // console.log("data in home page", res.data);
   };
   // console.log(Profile);
   const logout = async () => {

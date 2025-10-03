@@ -9,7 +9,6 @@ function ProfileUpdateModal({ isOpen, onClose, user, onUpdate, getUser }) {
     lastname: "",
     bio: "",
   });
-  console.log("user in update modal", user._id);
   // jab modal khule to user data set ho
   useEffect(() => {
     if (user) {
@@ -24,7 +23,7 @@ function ProfileUpdateModal({ isOpen, onClose, user, onUpdate, getUser }) {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  console.log(formData);
+
   
   const handleUpdate = async (id) => {
     try {

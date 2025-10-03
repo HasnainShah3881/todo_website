@@ -68,7 +68,7 @@ const ProfilePage = () => {
 
   const rerender = () => {
     if (Profile) {
-      console.log(Profile);
+      console.log("rerender");
     } else {
       navigate("/");
     }
@@ -84,10 +84,10 @@ const ProfilePage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleEditProfile = () => {
-    console.log("Edit profile clicked");
-    // Add edit functionality
-  };
+  // const handleEditProfile = () => {
+  //   console.log("Edit profile clicked");
+  //   // Add edit functionality
+  // };
 
   const logout = async () => {
     try {
