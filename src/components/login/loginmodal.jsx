@@ -15,6 +15,7 @@ export function Loginmodal() {
         size="lg"
         onClose={() => setopenLogin(false)}
         popup
+        className="pt-20"
       >
         <ModalHeader />
         <ModalBody className="px-6 sm:px-10 pb-5 sm:pb-10">

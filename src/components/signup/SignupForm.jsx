@@ -9,13 +9,13 @@ const SignupForm = () => {
   const [form] = Form.useForm();
   const { openSignup, setopenSignup } = useContext(DataContext);
   const { openLogin, setopenLogin } = useContext(DataContext);
-  const Allusers = () => {
-    console.log("fetch data");
-  };
+  // const Allusers = () => {
+  //   console.log("fetch data");
+  // };
 
   const signup = async (values) => {
     console.log("Received values of form: ", values);
-    try {
+    // try {
       const res = await axios.post(
         `${base_url}/Auth/signup`,
         {
@@ -28,24 +28,18 @@ const SignupForm = () => {
           withCredentials: true,
         }
       );
-      if (res.data.success === true || res.status === 200) {
+      if (res.data.success === true) {
         toast.success(res.data.message || "Signup successfully");
         setopenLogin(true);
         setopenSignup(false);
         form.resetFields();
+      } else {
+        toast.error(res.data.message || "invalid credential");
       }
 
       console.log("RESPONSE", res);
-    } catch (error) {
-      toast.error("invalid credential");
-
-      console.log("ERROR" + error);
-    }
   };
 
-  useEffect(() => {
-    Allusers;
-  }, []);
 
   return (
     <Form

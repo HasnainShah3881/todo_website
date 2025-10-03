@@ -9,32 +9,28 @@ const LoginForm = () => {
   const [form] = Form.useForm(); // Create form instance
   const { openSignup, setopenSignup } = useContext(DataContext);
   const { openLogin, setopenLogin } = useContext(DataContext);
-  const { User, setUser } = useContext(DataContext);
+  const { Profile, setProfile } = useContext(DataContext);
 
   const onFinish = async (values) => {
-    // console.log("Received values of form: ", values);
-    try {
-      const res = await axios.post(
-        `${base_url}/Auth/login`,
-        {
-          email: values.email,
-          password: values.password,
-        },
-        {
-          withCredentials: true,
-        }
-      );
-
-      if (res.data.success === true || res.status === 200) {
-        toast.success(res.data.message || "Login successfully");
-        form.resetFields();
-        setopenLogin(false);
-        setopenSignup(false);
-        window.location.reload();
+    const res = await axios.post(
+      `${base_url}/Auth/login`,
+      {
+        email: values.email,
+        password: values.password,
+      },
+      {
+        withCredentials: true,
       }
-      // console.log("RESPONSE", res);
-    } catch (error) {
-      toast.error("invalid credential");
+    );
+
+    if (res.data.success === true) {
+      toast.success(res.data.message || "Login successfully");
+      form.resetFields();
+      setopenLogin(false);
+      setopenSignup(false);
+      window.location.reload();
+    } else {
+      toast.error(res.data.message || "invalid credential");
     }
   };
 
