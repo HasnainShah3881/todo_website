@@ -1,3 +1,3 @@
-const base_url = "https://backend-todo-phi-two.vercel.app"
+const base_url = "https://backend-todo-lime.vercel.app"
 
 export { base_url }
