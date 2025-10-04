@@ -236,7 +236,7 @@ function Home() {
                   className="text-blue-600 text-lg hover:font-bold hover:text-blue-800"
                   onClick={() => handleToggle(todo._id)}
                 >
-                  {todo.expanded ? "see more" : "see less"}
+                  {todo.expanded ? "see less" : "see more"}
                 </button>
               </div>
               {todo.expanded && (
