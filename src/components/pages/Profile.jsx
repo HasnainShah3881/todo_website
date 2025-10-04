@@ -28,7 +28,8 @@ const ProfilePage = () => {
       withCredentials: true,
     });
     setProfile(res.data);
-    toast.success("login successfully");
+    toast.success("edit profile successfully");
+
   };
   // Animation variants
   const containerVariants = {
