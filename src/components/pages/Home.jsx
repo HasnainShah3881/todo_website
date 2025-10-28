@@ -221,7 +221,7 @@ function Home() {
 
       <div className="w-full flex flex-col items-center mt-10 px-2 sm:px-6">
         <AnimatePresence>
-          {todos.map((todo) => (
+          {todos?.map((todo) => (
             <motion.div
               key={todo._id}
               initial={{ opacity: 0, y: 20 }}
